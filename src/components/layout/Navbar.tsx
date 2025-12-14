@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Search, Bell, Monitor, Briefcase, FileText, MessageSquare, User, Calendar, Menu, X } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Profileimg from "@/assets/images/profileimg.png"
 import Logo from "@/assets/images/logo.png"
@@ -51,7 +51,7 @@ export default function Navbar() {
                             />
                         </div>
 
-                        <button className=" bg-main-blue hover:bg-main-blue/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
+                        <button className=" bg-main-blue hover:bg-main-blue/80 cursor-pointer text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
                             Resume Builder
                         </button>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
                                 className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
-                        <button className="w-full bg-main-blue hover:bg-main-blue/80 text-white px-4 py-2 rounded-lg text-[16px] font-medium transition-colors">
+                        <button className="w-full bg-main-blue hover:bg-main-blue/80 cursor-pointer text-white px-4 py-2 rounded-lg text-[16px] font-medium transition-colors">
                             Resume Builder
                         </button>
                     </div>

@@ -1,4 +1,4 @@
-import { MapPin, Clock, Users, Bookmark } from 'lucide-react';
+import { MapPin, Clock, Bookmark } from 'lucide-react';
 import Image from 'next/image';
 
 interface JobCardProps {
@@ -36,7 +36,7 @@ export default function JobCard({ title, company, location, logo, postedAt, appl
                 </div>
 
                 <div className="min-w-0">
-                    <h3 className="text-[14px] font-medium text-black leading-none tracking-normal mb-1 group-hover:text-main-blue transition-colors line-clamp-2">{title}</h3>
+                    <h3 className="text-[14px] font-medium text-black leading-none tracking-normal mb-1 group-hover:text-main-blue transition-colors line-clamp-2 cursor-pointer">{title}</h3>
                     <p className="text-[12px] font-medium text-main-gray-medium leading-none tracking-normal truncate">{company}</p>
                 </div>
             </div>
@@ -59,7 +59,7 @@ export default function JobCard({ title, company, location, logo, postedAt, appl
             </div>
 
             <div className="flex items-center justify-between gap-2">
-                <button className="flex-1 bg-main-blue hover:bg-main-blue/80 text-white py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap">
+                <button className="flex-1 bg-main-blue hover:bg-main-blue/80  cursor-pointer text-white py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap">
                     Apply Now
                 </button>
                 <button className="p-1.5 text-gray-400 hover:text-main-blue hover:bg-blue-50 rounded-lg border border-gray-200 transition-colors">
