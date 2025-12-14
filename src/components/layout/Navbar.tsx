@@ -5,25 +5,30 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Search, Bell, Monitor, Briefcase, FileText, MessageSquare, User, Calendar, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Profileimg from "../../../public/images/profileimg.png"
+import Logo from "../../../public/images/logo.png"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // ... existing code ...
     return (
-        <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+        <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 h-[70px]">
+            <div className="max-w-[1443px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
+                <div className="flex justify-between items-center h-full">
                     {/* Left: Logo & Nav Links */}
-                    <div className="flex items-center gap-8">
-                        <Link href="/" className="flex items-center gap-2">
-                            <div className="bg-blue-600 p-1.5 rounded-full">
-                                <div className="text-white font-bold text-xl leading-none">f</div>
-                            </div>
-                            <span className="text-xl font-bold text-blue-900">FindJobs</span>
+                    <div className="flex items-center gap-[40px] overflow-x-auto no-scrollbar">
+                        <Link href="/" className="flex items-center flex-shrink-0">
+                            <Image
+                                src={Logo}
+                                alt="FindJobs"
+                                className="object-contain h-10 w-auto"
+                                priority
+                            />
                         </Link>
 
                         {/* Desktop Nav */}
-                        <div className="hidden lg:flex items-center gap-6">
+                        <div className="hidden lg:flex items-center gap-[25px] whitespace-nowrap">
                             <NavLink href="#" active>Find Jobs</NavLink>
                             <NavLink href="#">Top Companies</NavLink>
                             <NavLink href="#">Job Tracker</NavLink>
@@ -34,8 +39,9 @@ export default function Navbar() {
                         </div>
                     </div>
 
+
                     {/* Right: Search, Actions, Profile (Desktop) */}
-                    <div className="hidden lg:flex items-center gap-4">
+                    <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
                         <div className="relative">
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                             <input
@@ -45,13 +51,13 @@ export default function Navbar() {
                             />
                         </div>
 
-                        <button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                        <button className=" bg-main-blue hover:bg-main-blue/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
                             Resume Builder
                         </button>
 
                         <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden border-2 border-white shadow-sm relative">
                             <Image
-                                src="https://i.pravatar.cc/150?u=albert"
+                                src={Profileimg}
                                 alt="Profile"
                                 width={40}
                                 height={40}
@@ -64,7 +70,7 @@ export default function Navbar() {
                     <div className="lg:hidden flex items-center gap-4">
                         <div className="h-8 w-8 rounded-full bg-gray-200 overflow-hidden border border-white shadow-sm relative">
                             <Image
-                                src="https://i.pravatar.cc/150?u=albert"
+                                src={Profileimg}
                                 alt="Profile"
                                 width={32}
                                 height={32}
@@ -105,7 +111,7 @@ export default function Navbar() {
                                 className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
-                        <button className="w-full bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                        <button className="w-full bg-main-blue hover:bg-main-blue/80 text-white px-4 py-2 rounded-lg text-[16px] font-medium transition-colors">
                             Resume Builder
                         </button>
                     </div>
@@ -120,8 +126,8 @@ function NavLink({ href, children, active }: { href: string; children: React.Rea
         <Link
             href={href}
             className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-600",
-                active ? "text-blue-600" : "text-gray-500"
+                "text-[16px] leading-[19px] font-medium  hover:text-main-blue whitespace-nowrap",
+                active ? "text-main-blue" : "text-main-gray"
             )}
         >
             {children}
@@ -134,8 +140,8 @@ function MobileNavLink({ href, children, active }: { href: string; children: Rea
         <Link
             href={href}
             className={cn(
-                "block py-2 text-base font-medium transition-colors hover:text-blue-600 hover:bg-gray-50 rounded-lg px-2",
-                active ? "text-blue-600 bg-blue-50" : "text-gray-600"
+                "block py-2 text-base font-medium transition-colors hover:text-main-blue hover:bg-gray-50 rounded-lg px-2",
+                active ? "text-main-blue bg-blue-50" : "text-gray-600"
             )}
         >
             {children}

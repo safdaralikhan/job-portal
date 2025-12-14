@@ -8,7 +8,7 @@ export default function Home() {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="max-w-[1443px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left Sidebar - 3 columns on large screens */}
           <aside className="w-full lg:w-80 flex-none space-y-8">
@@ -20,8 +20,9 @@ export default function Home() {
             <HeroSearch />
 
             <div className="space-y-4">
-              <JobSection title="Featured Jobs" />
+              <JobSection title="Featured Jobs" limit={5} />
               <JobSection title="Recommended Jobs" />
+              <JobSection title="Latest Jobs" />
             </div>
           </div>
         </div>
