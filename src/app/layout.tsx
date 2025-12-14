@@ -30,7 +30,7 @@ const neueHaas = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "FindJobs",
+  title: "TalentVare ",
   description: "Job Portal Application",
 };
 
