@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 const neueHaas = localFont({
   src: [
     {
-      path: '../../public/fonts/fonnts.com-Neue_Haas_Grotesk_Display_Pro_55_Roman.otf',
+      path: './fonts/fonnts.com-Neue_Haas_Grotesk_Display_Pro_55_Roman.otf',
       weight: '500',
       style: '55 Roman',
     },
     {
-      path: '../../public/fonts/Neue Haas Grotesk Display Pro 65 Medium.woff2',
+      path: './fonts/Neue Haas Grotesk Display Pro 65 Medium.woff2',
       weight: '600',
       style: '65 Medium',
     }

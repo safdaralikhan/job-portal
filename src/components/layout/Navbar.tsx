@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Search, Bell, Monitor, Briefcase, FileText, MessageSquare, User, Calendar, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import Profileimg from "../../../public/images/profileimg.png"
-import Logo from "../../../public/images/logo.png"
+import Profileimg from "@/assets/images/profileimg.png"
+import Logo from "@/assets/images/logo.png"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

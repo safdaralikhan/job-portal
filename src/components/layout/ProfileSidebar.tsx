@@ -1,7 +1,7 @@
 import { MapPin } from 'lucide-react';
 import Image from 'next/image';
-import SidbarProfile from "../../../public/images/sidbarprofile.png"
-import CoverImage from "../../../public/images/sidbarbg.png"
+import SidbarProfile from "@/assets/images/sidbarprofile.png";
+import CoverImage from "@/assets/images/sidbarbg.png";
 
 export default function ProfileSidebar() {
     return (
