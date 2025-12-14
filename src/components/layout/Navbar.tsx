@@ -11,7 +11,7 @@ import Logo from "@/assets/images/logo.png"
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // ... existing code ...
+
     return (
         <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 h-[70px]">
             <div className="max-w-[1443px] mx-auto px-4 sm:px-6 lg:px-8 h-full">

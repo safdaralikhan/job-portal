@@ -20,15 +20,13 @@ export default function JobSection({ title, limit }: JobSectionProps) {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[15px]">
-                {jobsToDisplay.map((job, index) => (
+                {jobsToDisplay?.map((job, index) => (
                     <JobCard
                         key={index}
                         title={job.title}
                         company={job.company}
                         logo={job.logo}
                         location={job.location}
-                        type={job.type}
-                        salary={job.salary}
                         postedAt={job.time}
                         applicants={job.applicants}
                     />

@@ -5,15 +5,13 @@ interface JobCardProps {
     title: string;
     company: string;
     location: string;
-    type: string;
-    salary?: string;
     logo: string;
     postedAt: string;
     applicants: number;
 }
 
-// ... props interface ...
-export default function JobCard({ title, company, location, type, salary, logo, postedAt, applicants }: JobCardProps) {
+
+export default function JobCard({ title, company, location, logo, postedAt, applicants }: JobCardProps) {
     return (
         <div className="bg-white rounded-xl p-3 border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
             {/* Promoted Label */}
@@ -54,7 +52,7 @@ export default function JobCard({ title, company, location, type, salary, logo, 
                         <span className="whitespace-nowrap">{postedAt}</span>
                     </div>
                     <div className="flex items-center gap-1">
-                        <span>|</span> {/* <Users className="h-3 w-3" /> */}
+                        <span>|</span>
                         <span className="whitespace-nowrap text-main-blue">{applicants} applicants</span>
                     </div>
                 </div>
